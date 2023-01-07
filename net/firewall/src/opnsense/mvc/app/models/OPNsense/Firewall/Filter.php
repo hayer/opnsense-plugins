@@ -42,6 +42,9 @@ class Filter extends BaseModel
     {
         // standard model validations
         $messages = parent::performValidation($validateFullModel);
+
+        // TODO: Validate dnatrules
+
         foreach ([$this->rules->rule, $this->snatrules->rule] as $rules) {
             foreach ($rules->iterateItems() as $rule) {
                 // validate changed rules

@@ -2,11 +2,15 @@
     <Firewall>
         <Automation order="1000" cssClass="fa fa-gear">
             <Filter order="50" url="/ui/firewall/filter/">
-                <FilterRef url="/ui/firewall/filter#*"/>
+                <FilterRef url="/ui/firewall/filter#*" />
             </Filter>
             <SourceNat order="100" VisibleName="Source NAT" url="/ui/firewall/source_nat/">
-                <FilterRef url="/ui/firewall/source_nat#*"/>
+                <FilterRef url="/ui/firewall/source_nat#*" />
             </SourceNat>
+            <DestinationNat order="101" VisibleName="Destination NAT"
+                url="/ui/firewall/destination_nat">
+                <FilterRef url="/ui/firewall/destination_nat#*" />
+            </DestinationNat>
         </Automation>
     </Firewall>
 </menu>
